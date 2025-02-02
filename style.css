@@ -1,0 +1,24 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: url('../images/your-hero-image.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 100px 0;
+  }
+  
+  /* Features Section */
+  .features {
+    padding: 50px 0;
+  }
+  
+  /* Footer */
+  footer {
+    margin-top: 50px;
+  }
