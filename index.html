@@ -4,47 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Present Sir - Digital Attendance</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        header {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .menu {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .menu li {
+            display: inline;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .showcase {
+            text-align: center;
+            padding: 50px;
+            background-color: #007bff;
+            color: white;
+        }
+        .content {
+            padding: 40px;
+            text-align: center;
+            background-color: white;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Present Sir</h1>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="registration.html">Registration</a></li>
+            <div class="logo">Present Sir</div>
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="register.html">Register</a></li>
                 <li><a href="login.html">Login</a></li>
                 <li><a href="classes.html">Classes</a></li>
-                <li><a href="school_profile.html">My School Profile</a></li>
+                <li><a href="profile.html">My School Profile</a></li>
             </ul>
         </nav>
     </header>
     
-    <main>
-        <section id="showcase">
-            <h2>Showcasing Present Sir</h2>
-            <p>A digital attendance system that records attendance and updates this website automatically.</p>
-        </section>
-        
-        <section id="vision">
-            <h2>Our Vision</h2>
-            <p>To revolutionize attendance management with digital efficiency.</p>
-        </section>
-        
-        <section id="prototype">
-            <h2>Our Prototype</h2>
-            <p>We have developed a smart device that automates attendance recording.</p>
-        </section>
-        
-        <section id="problem-statement">
-            <h2>Problem Statement</h2>
-            <p>Traditional attendance systems are inefficient and prone to errors.</p>
-        </section>
-        
-        <section id="solution">
-            <h2>Our Solution</h2>
-            <p>Automated digital attendance system integrated with a real-time web interface.</p>
-        </section>
-    </main>
+    <section id="home" class="showcase">
+        <h1>Revolutionizing Attendance Management</h1>
+        <p>A smart, digital solution for schools to track attendance seamlessly.</p>
+    </section>
+    
+    <section id="problem" class="content">
+        <h2>Addressed Problem</h2>
+        <p>Traditional attendance methods are inefficient, prone to errors, and time-consuming.</p>
+    </section>
+    
+    <section id="solution" class="content">
+        <h2>Our Solution</h2>
+        <p>We provide a digital device that automates attendance and directly updates school records.</p>
+    </section>
+    
+    <section id="prototype" class="content">
+        <h2>Our Prototype</h2>
+        <p>Our working model integrates biometric and RFID-based identification for secure attendance.</p>
+    </section>
+    
+    <section id="vision" class="content">
+        <h2>Our Vision</h2>
+        <p>To modernize school attendance systems and improve administrative efficiency.</p>
+    </section>
     
     <footer>
         <p>&copy; 2025 Present Sir. All rights reserved.</p>
