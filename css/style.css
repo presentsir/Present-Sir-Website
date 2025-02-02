@@ -1,0 +1,83 @@
+/* Reset and Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+  }
+  
+  /* Flex container to push footer to the bottom */
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Header adjustments */
+  header {
+    padding: 10px 0;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: url('../hero section background img link') no-repeat center center/cover;
+    color: white;
+    padding: 100px 0;
+  }
+  
+  /* Features Section */
+  .features {
+    padding: 50px 0;
+  }
+  
+  /* Testimonials Section */
+  .testimonials {
+    background-color: #f1f1f1;
+    padding: 50px 0;
+  }
+  
+  /* Register and Contact Sections */
+  .register,
+  .contact {
+    padding: 50px 0;
+  }
+  
+  /* Footer */
+  footer {
+    margin-top: auto;
+  }
+  
+  /* Container adjustments */
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  /* Additional Utility Classes */
+  .text-center {
+    text-align: center;
+  }
+  
+  .my-5 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  
+  .mb-4 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .mt-3 {
+    margin-top: 1rem;
+  }
+  
+  .fst-italic {
+    font-style: italic;
+  }
+  
