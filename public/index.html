@@ -1,105 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Present Sir - Digital Attendance</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-        }
-        header {
-            background-color: #333;
-            padding: 20px;
-            text-align: center;
-        }
-        .logo {
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .menu {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        .menu li {
-            display: inline;
-        }
-        .menu a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-        }
-        .showcase {
-            text-align: center;
-            padding: 50px;
-            background-color: #007bff;
-            color: white;
-        }
-        .content {
-            padding: 40px;
-            text-align: center;
-            background-color: white;
-            margin: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: white;
-        }
-    </style>
+
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Present Sir - Digital Attendance</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Present Sir</div>
-            <ul class="menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="register.html">Register</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="classes.html">Classes</a></li>
-                <li><a href="profile.html">My School Profile</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+      <div class="container-fluid">
+        <img  class="logo" src="Present Sir Logo_edited.jpg" >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="/">Home</a>
+            <a class="nav-link" href="/registration">Registration</a>
+            <a class="nav-link" href="/login">Login</a>
+            <a class="nav-link" href="/addClasses">Add Classes</a>
+            <a class="nav-link" href="/myProfile">My Profile</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Home Section with a Hero Image and Background Video -->
+  <section id="home" class="section home-section">
+    <div class="media-container">
+      <img src="https://via.placeholder.com/1200x500?text=Hero+Image" alt="Hero Image" />
+      <!-- Optional background video; remove if not needed -->
+      <video class="bg-video" autoplay muted loop>
+        <source src="https://videos.pexels.com/video-files/5198159/5198159-uhd_2560_1440_25fps.mp4" type="video/mp4" />
+        Your browser does not support HTML5 video.
+      </video>
+    </div>
+    <div class="content-overlay">
+        <h1 class="present_sir">PRESENT SIR!</h1>
+      <h1 class="heading_name">Revolutionizing Attendance Management System</h1>
+      <p>A smart, digital solution for schools to track attendance seamlessly.</p>
+    </div>
+  </section>
+
+  <!-- Problem Section with an Image -->
+  <section id="problem" class="section content-section">
+    <div class="section-inner">
+      <h2 class="h2">Addressed Problem</h2>
+      <p>Traditional attendance methods are inefficient, prone to errors,physical registers required and time-consuming.</p>
+      <img class="sample_img" src="https://img.freepik.com/free-photo/businesswoman-writing-diary-office_107420-96194.jpg?t=st=1738623267~exp=1738626867~hmac=44afed1a909c46eb377b38100090f79107c56bf38687f9dacff84778f291d3aa&w=1060" alt="Problem Illustration" />
+    </div>
+  </section>
+
+  <!-- Solution Section with an Image -->
+   
+  <section id="solution" class="section content-section alternate our_solution">
+    <div class="our_sol_content">
+        <div class="section-inner">
+            <h2 class="h2">Our Solution</h2>
+            <p>To avoid the use of physicall register , We provide a digital device that automates attendance digitally and directly updates school records on present sir attendence app or on website. it save time of teacher and teacher easily  can mark attendance of every student with great efficiency and without maintaining a physical register. </p>
+        </div>
+    </div>
+      <img class="our_solution_img" src="https://img.freepik.com/free-photo/portrait-handsome-man-with-his-backpack-using-smartphone_23-2148164295.jpg?t=st=1738625872~exp=1738629472~hmac=f19542699545fe9a6c19f0d7ab148fc1f65067301f7c6927e7286ff3730fd27a&w=360" alt="Solution Illustration" />
     
-    <section id="home" class="showcase">
-        <h1>Revolutionizing Attendance Management</h1>
-        <p>A smart, digital solution for schools to track attendance seamlessly.</p>
-    </section>
+  </section>
+
+  <!-- Prototype Section with an Image and Video Demo -->
+  <section id="prototype" class="section content-section">
+    <div class="section-inner">
+      <h2 class="h2">Our Prototype</h2>
+      <p>
+        Our working model mark presence digitally and save it . You can access this attendance in present sir attendence application and on the website of present sir .
+      </p>
+      <img class="sample_img" src="https://img.freepik.com/premium-photo/black-sony-device-with-red-light-it_364561-32595.jpg" alt="Prototype Illustration" />
+      <div class="video-container">
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision Section with an Image -->
+  <section id="vision" class="section content-section alternate">
+    <video class="bg-video-vision" autoplay muted loop>
+      <source src="coverr-close-up-of-a-futuristic-woman-with-digital-patterns-on-her-face-1080p.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+    <div class="section-inner">
+      <h2 class="h2">Our Vision</h2>
+      <p>My vision for the digitalization of the attendance system in India is to create a seamless, efficient, and transparent process that leverages modern technology to benefit both organizations and their workforce. By integrating smart devices and cloud-based platforms, we can eliminate the inefficiencies and inaccuracies of traditional manual attendance methods, thereby enhancing overall productivity and data security. This transition aims to streamline operations in educational institutions, corporate environments, and government agencies, ensuring real-time tracking and analysis of attendance data. Ultimately, this initiative is not only about embracing technological advancement but also about fostering a culture of accountability and innovation, which will pave the way for a more connected and digitally empowered India.</p>
+      <!-- <img src="coverr-close-up-of-a-futuristic-woman-with-digital-patterns-on-her-face-1080p.mp4" alt="Vision Illustration" /> -->
+
+    </div>
     
-    <section id="problem" class="content">
-        <h2>Addressed Problem</h2>
-        <p>Traditional attendance methods are inefficient, prone to errors, and time-consuming.</p>
-    </section>
-    
-    <section id="solution" class="content">
-        <h2>Our Solution</h2>
-        <p>We provide a digital device that automates attendance and directly updates school records.</p>
-    </section>
-    
-    <section id="prototype" class="content">
-        <h2>Our Prototype</h2>
-        <p>Our working model integrates biometric and RFID-based identification for secure attendance.</p>
-    </section>
-    
-    <section id="vision" class="content">
-        <h2>Our Vision</h2>
-        <p>To modernize school attendance systems and improve administrative efficiency.</p>
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 Present Sir. All rights reserved.</p>
-    </footer>
+  </section>
+
+  <footer>
+    <div class="f-info">
+      <div class="f-info-socials">
+        <i class="fa-brands fa-square-facebook"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-square-instagram"></i>
+        <i class="fa-brands fa-square-twitter"></i>
+      </div>
+      <div class="f-info-company">&copy;PresentSir Private Limited</div>
+      <div class="f-info-links">
+        <a href="privacy">Privacy</a>
+        <a href="terms">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
 </body>
 </html>
+
+</html>
+
