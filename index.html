@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Present Sir - Digital Attendance</title>
@@ -24,124 +22,196 @@
     href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet"
   />
+  <style>
+     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+     
+     .btn {
+       border-radius: 40px;
+     }
+
+     /* Navbar animation */
+     .nav-link {
+       position: relative;
+       padding-bottom: 5px;
+     }
+
+     .nav-link::after {
+       content: '';
+       position: absolute;
+       left: 50%;
+       bottom: -5px;
+       width: 0;
+       height: 2px;
+       background: black;
+       transition: all 0.3s ease-in-out;
+       transform: translateX(-50%);
+     }
+
+     .nav-link:hover::after {
+       width: 100%;
+     }
+
+     /* Section animation */
+     .section {
+       opacity: 0;
+       transform: translateY(50px);
+       transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+     }
+
+     .section.show {
+       opacity: 1;
+       transform: translateY(0);
+     }
+  </style>
 </head>
 <body>
-  <header>
-    <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
-      <div class="container-fluid">
-        <img  class="logo" src="Present Sir Logo_edited.jpg" >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavAltMarkup"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link" href="/">Home</a>
-            <a class="nav-link" href="/registration">Registration</a>
-            <a class="nav-link" href="/login">Login</a>
-            <a class="nav-link" href="/addClasses">Add Classes</a>
-            <a class="nav-link" href="/myProfile">My Profile</a>
+    <!-- navbar -->
+    <header class="sticky-top ">
+        <nav class="navbar navbar-expand-md bg-body-dark border-bottom ">
+          <div class="container-fluid">
+            <img  class="logo" src="Present Sir Logo_edited.jpg" >
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavAltMarkup"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="classes.html">Classes</a>
+                <a class="nav-link" href="students.html">Students </a>
+                <a class="nav-link" href="myProfile.html">My Profile</a>
+                <a class="nav-link" href="termsNconditions.html">Contact Us</a>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <!-- Home Section with a Hero Image and Background Video -->
-  <section id="home" class="section home-section">
-    <div class="media-container">
-      <img src="https://via.placeholder.com/1200x500?text=Hero+Image" alt="Hero Image" />
-      <!-- Optional background video; remove if not needed -->
-      <video class="bg-video" autoplay muted loop>
-        <source src="https://videos.pexels.com/video-files/5198159/5198159-uhd_2560_1440_25fps.mp4" type="video/mp4" />
-        Your browser does not support HTML5 video.
-      </video>
-    </div>
-    <div class="content-overlay">
-        <h1 class="present_sir">PRESENT SIR!</h1>
-      <h1 class="heading_name">Revolutionizing Attendance Management System</h1>
-      <p>A smart, digital solution for schools to track attendance seamlessly.</p>
-    </div>
-  </section>
-
-  <!-- Problem Section with an Image -->
-  <section id="problem" class="section content-section">
-    <div class="section-inner">
-      <h2 class="h2">Addressed Problem</h2>
-      <p>Traditional attendance methods are inefficient, prone to errors,physical registers required and time-consuming.</p>
-      <img class="sample_img" src="https://img.freepik.com/free-photo/businesswoman-writing-diary-office_107420-96194.jpg?t=st=1738623267~exp=1738626867~hmac=44afed1a909c46eb377b38100090f79107c56bf38687f9dacff84778f291d3aa&w=1060" alt="Problem Illustration" />
-    </div>
-  </section>
-
-  <!-- Solution Section with an Image -->
-   
-  <section id="solution" class="section content-section alternate our_solution">
-    <div class="our_sol_content">
-        <div class="section-inner">
-            <h2 class="h2">Our Solution</h2>
-            <p>To avoid the use of physicall register , We provide a digital device that automates attendance digitally and directly updates school records on present sir attendence app or on website. it save time of teacher and teacher easily  can mark attendance of every student with great efficiency and without maintaining a physical register. </p>
-        </div>
-    </div>
-      <img class="our_solution_img" src="https://img.freepik.com/free-photo/portrait-handsome-man-with-his-backpack-using-smartphone_23-2148164295.jpg?t=st=1738625872~exp=1738629472~hmac=f19542699545fe9a6c19f0d7ab148fc1f65067301f7c6927e7286ff3730fd27a&w=360" alt="Solution Illustration" />
+        </nav>
+      </header>
     
-  </section>
-
-  <!-- Prototype Section with an Image and Video Demo -->
-  <section id="prototype" class="section content-section">
-    <div class="section-inner">
-      <h2 class="h2">Our Prototype</h2>
-      <p>
-        Our working model mark presence digitally and save it . You can access this attendance in present sir attendence application and on the website of present sir .
-      </p>
-      <img class="sample_img" src="https://img.freepik.com/premium-photo/black-sony-device-with-red-light-it_364561-32595.jpg" alt="Prototype Illustration" />
-      <div class="video-container">
+      <!-- Home Section with a Hero Image and Background Video -->
+      <section id="home" class="section home-section">
+        <div class="media-container">
+          <img src="https://via.placeholder.com/1200x500?text=Hero+Image" alt="Hero Image" />
+          <!-- Optional background video; remove if not needed -->
+          <video class="bg-video" autoplay muted loop>
+            <source src="https://videos.pexels.com/video-files/5198159/5198159-uhd_2560_1440_25fps.mp4" type="video/mp4" />
+            Your browser does not support HTML5 video.
+          </video>
+        </div>
+        <div class="content-overlay">
+            <h1 class="present_sir">PRESENT SIR!</h1>
+          <h1 class="heading_name">Revolutionizing Attendance Management System</h1>
+          <p>A smart, digital solution for schools to track attendance seamlessly.</p>
+          <div class="container mt-5">
+          <button class="btn btn-primary btn-lg" onclick="window.location.href='./register.html'">
+              Register
+          </button>
+        </div>
         
       </div>
-    </div>
-  </section>
-
-  <!-- Vision Section with an Image -->
-  <section id="vision" class="section content-section alternate">
-    <video class="bg-video-vision" autoplay muted loop>
-      <source src="coverr-close-up-of-a-futuristic-woman-with-digital-patterns-on-her-face-1080p.mp4" type="video/mp4" />
-      Your browser does not support HTML5 video.
-    </video>
-    <div class="section-inner">
-      <h2 class="h2">Our Vision</h2>
-      <p>My vision for the digitalization of the attendance system in India is to create a seamless, efficient, and transparent process that leverages modern technology to benefit both organizations and their workforce. By integrating smart devices and cloud-based platforms, we can eliminate the inefficiencies and inaccuracies of traditional manual attendance methods, thereby enhancing overall productivity and data security. This transition aims to streamline operations in educational institutions, corporate environments, and government agencies, ensuring real-time tracking and analysis of attendance data. Ultimately, this initiative is not only about embracing technological advancement but also about fostering a culture of accountability and innovation, which will pave the way for a more connected and digitally empowered India.</p>
-      <!-- <img src="coverr-close-up-of-a-futuristic-woman-with-digital-patterns-on-her-face-1080p.mp4" alt="Vision Illustration" /> -->
-
-    </div>
+      </section>
     
-  </section>
-
-  <footer>
-    <div class="f-info">
-      <div class="f-info-socials">
-        <i class="fa-brands fa-square-facebook"></i>
-        <i class="fa-brands fa-linkedin"></i>
-        <i class="fa-brands fa-square-instagram"></i>
-        <i class="fa-brands fa-square-twitter"></i>
+      <!-- Problem Section with an Image -->
+      <section id="problem" class="section content-section">
+        <div class="section-inner ">
+          <div>
+            <h2 class="h2">Addressed Problem</h2>
+          <p>Traditional attendance methods are inefficient, prone to errors,physical registers required and time-consuming.</p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum, a! Quod quis animi voluptas atque ex praesentium dicta harum inventore optio dolore mollitia autem tempore quaerat, voluptatibus cum eum. Unde! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, deserunt? Sit expedita qui numquam nam pariatur amet consequuntur, omnis vel reiciendis, laudantium magni vero dolorum minima iste laborum eum cumque!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ullam nulla, in architecto perferendis odit ipsa assumenda ex illo sapiente molestiae repellendus laudantium similique suscipit totam, quod, ducimus nihil ab.
+          </p>
+        </div>
+        <img class="problem-img" src="Stressed millennial guy studying before college exams.jpg" >
       </div>
-      <div class="f-info-company">&copy;PresentSir Private Limited</div>
-      <div class="f-info-links">
-        <a href="privacy">Privacy</a>
-        <a href="terms">Terms</a>
-      </div>
-    </div>
-  </footer>
-
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"
-  ></script>
+        
+      </section>
+    
+      <!-- Solution Section with an Image -->
+       
+      <section id="solution" class="section content-section alternate our_solution">
+        
+            <div class="section-inner">
+              <div class="our_sol_content">
+              <div class="content-padding">  
+              <h2 class="h2">Our Solution</h2>
+                <p>To avoid the use of physicall register , We provide a digital device that automates attendance digitally and directly updates school records on present sir attendence app or on website. it save time of teacher and teacher easily  can mark attendance of every student with great efficiency and without maintaining a physical register. 
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui veniam voluptatem quidem modi voluptatibus cumque, dolores at sit? Debitis obcaecati sapiente est corporis voluptatem animi beatae magni similique nesciunt aspernatur.
+                  Facere ratione iste modi tempora sequi magnam labore alias, ducimus explicabo odio illum, animi temporibus quod ipsum hic quaerat, praesentium perferendis quibusdam cumque minima eaque excepturi. Molestiae magni quam officia!
+                  Sapiente provident sed reiciendis nobis iusto fugiat rem accusamus veritatis quia voluptate! Deserunt, quasi perferendis. Ipsa magnam iste error ad sunt totam eligendi, voluptatem sint voluptas quaerat nam expedita eveniet.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto esse vero non at totam dicta eaque blanditiis odit amet nesciunt repellat earum quae iusto quo, debitis ut reiciendis quasi vitae?
+                </p>
+            </div></div>
+            <img class="our_solution_img" src="business-people-work-using-digital-tablet_1301-4137.jpg" alt="Solution Illustration" />
+          
+        </div>
+          
+        
+      </section>
+    
+      <!-- Prototype Section with an Image and Video Demo -->
+      <section id="prototype" class="section content-section">
+        <div class="section-inner">
+          <div>
+          <h2 class="h2">Our Prototype</h2>
+          <p>
+            Our working model mark presence digitally and save it . You can access this attendance in present sir attendence application and on the website of present sir .
+          </p>
+          <img class="sample_img" src="https://img.freepik.com/premium-photo/black-sony-device-with-red-light-it_364561-32595.jpg" alt="Prototype Illustration" />
+         </div>
+        </div>
+      </section>
+    
+      <!-- Vision Section with an Image -->
+      <section id="vision" class="section  ">
+          <div class=" visiom "><video class="bg-video-vision" autoplay muted loop>
+          <source src="coverr-close-up-of-a-futuristic-woman-with-digital-patterns-on-her-face-1080p.mp4" type="video/mp4" />
+          Your browser does not support HTML5 video.
+        </video></div>
+             <div class="content-overlay"> <h2 class="h2">Our Vision</h2></div>
+        
+        <div >
+    
+          <p>My vision for the digitalization of the attendance system in India is to create a seamless, efficient, and transparent process that leverages modern technology to benefit both organizations and their workforce. By integrating smart devices and cloud-based platforms, we can eliminate the inefficiencies and inaccuracies of traditional manual attendance methods, thereby enhancing overall productivity and data security. This transition aims to streamline operations in educational institutions, corporate environments, and government agencies, ensuring real-time tracking and analysis of attendance data. Ultimately, this initiative is not only about embracing technological advancement but also about fostering a culture of accountability and innovation, which will pave the way for a more connected and digitally empowered India.</p>
+          
+    
+        </div>
+        
+      </section>
+    
+      <footer>
+        <div class="f-info">
+          <div class="f-info-socials">
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-square-twitter"></i>
+          </div>
+          <div class="f-info-company">&copy;PresentSir Private Limited</div>
+          <div class="f-info-links">
+            <a href="privacy">Privacy</a>
+            <a href="terms">Terms</a>
+          </div>
+        </div>
+      </footer>
+    
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const sections = document.querySelectorAll(".section");
+      
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      }, { threshold: 0.2 });
+      
+      sections.forEach(section => observer.observe(section));
+    });
+  </script>
 </body>
 </html>
-
-</html>
-

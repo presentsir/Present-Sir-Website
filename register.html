@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Registration</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            background-image: url(6557.jpg);
+            background-size: cover;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 300;
+        }
+
+       
+            
+        
+        .register-container {
+            max-width: 500px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .logo {
+            width: 80px;
+            margin-bottom: 15px;
+        }
+        .social-buttons button {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .or-divider {
+            margin: 15px 0;
+            font-weight: bold;
+            color: #777;
+        }
+
+        .btn{
+            border-radius: 20px;
+            
+        }
+
+        .f-info{
+     height: 8rem;
+     padding: 15px 0px;
+    background-color: rgb(232, 232, 232);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:center;
+}
+.f-info-socials,.f-info-company,.f-info-links{
+    width: 100%;
+    text-align: center;
+}
+.f-info-socials i{
+    font-size: 1.4rem;
+    padding: 0px 10px;
+}
+.f-info-links a {
+    text-decoration:none;
+    color:#222222;
+}
+.f-info-links{
+    width: 100%;
+}
+
+.f-info-links a:hover {
+    text-decoration: underline;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="register-container">
+            <img src="Present Sir Logo_edited.jpg" alt="Logo" class="logo">
+            <h2 class="mb-3">Welcome to School Registration</h2>
+            <p>Please sign up using your details below</p>
+            
+            <div class="social-buttons">
+                <button class="btn btn-outline-danger"><i class="fa-brands fa-google  "></i> Sign up with Google</button>
+                <button class="btn btn-outline-primary"><i class="fa-brands fa-facebook"></i> Sign up with Facebook</button>
+                <button class="btn btn-outline-info"><i class="fa-brands fa-twitter"></i> Sign up with Twitter</button>
+            </div>
+            
+            <div class="or-divider">OR</div>
+            
+            <form href="redirect to home page">
+                <div class="mb-3">
+                    <label for="collegeName" class="form-label">College Name</label>
+                    <input type="text" class="form-control" id="collegeName" placeholder="Enter college name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="udiseCode" class="form-label">UDISE Code</label>
+                    <input type="text" class="form-control" id="udiseCode" placeholder="Enter UDISE code" required>
+                </div>
+                <div class="mb-3">
+                    <label for="address" class="form-label">Address</label>
+                    <textarea class="form-control" id="address" rows="3" placeholder="Enter college address" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Register</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="f-info">
+          <div class="f-info-socials">
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-square-twitter"></i>
+          </div>
+          <div class="f-info-company">&copy;PresentSir Private Limited</div>
+          <div class="f-info-links">
+            <a href="privacy">Privacy</a>
+            <a href="terms">Terms</a>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>
