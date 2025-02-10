@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Class Entry</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url(stone-texture-background.jpg) no-repeat center center/cover;
+            backdrop-filter: blur(8px);
+        }
+
+        .container {
+            max-width: 95%;
+            margin: 40px auto;
+        }
+
+        .entry-form {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .list-container {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow-x: auto; /* Prevents horizontal overflow */
+        }
+
+        .table {
+            font-size: 14px; /* Reduced font size for better mobile view */
+            white-space: nowrap; /* Ensures content does not wrap */
+        }
+
+        @media (min-width: 768px) {
+            .entry-form {
+                width: 30%;
+            }
+            .list-container {
+                width: 70%;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .table {
+                font-size: 12px;
+            }
+            .entry-form, .list-container {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row d-flex justify-content-between">
+            <div class="col-md-4 col-12 entry-form">
+                <div class="text-center"><img src="Present Sir Logo_edited.jpg" alt="Logo" class="logo"></div>
+                <h3 class="text-center font">Add Class Details</h3>
+                <form id="classForm">
+                    <div class="mb-3">
+                        <label for="className" class="form-label">Class Name</label>
+                        <input type="text" class="form-control" id="className" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="section" class="form-label">Section</label>
+                        <input type="text" class="form-control" id="section" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="teacher" class="form-label">Class Teacher</label>
+                        <input type="text" class="form-control" id="teacher" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="students" class="form-label">No. of Students</label>
+                        <input type="number" class="form-control" id="students" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Add Entry</button>
+                </form>
+            </div>
+            <div class="col-md-8 col-12 list-container">
+                <h3 class="text-center font">Classes Details</h3>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Class</th>
+                                <th>Section</th>
+                                <th>Class Teacher</th>
+                                <th>No. of Students</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="classList">
+                            <tr id="emptyMessage">
+                                <td colspan="5" class="text-center text-muted">No entries yet.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
