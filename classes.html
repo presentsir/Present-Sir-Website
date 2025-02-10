@@ -1,17 +1,11 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School Class Entry</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
         body {
@@ -19,26 +13,53 @@
             background: url(stone-texture-background.jpg) no-repeat center center/cover;
             backdrop-filter: blur(8px);
         }
-        .container {
-            max-width: 90%;
-            margin: 50px 50px 100px 50px;
-        }
-        .entry-form {
-            background: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            width: 30%;
-            height: 550px;
-            margin-right: 5%;
-        }
-        .entry-form-img {
-            height: 80px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
+
+.container {
+    max-width: 95%;
+    margin: 50px auto 100px auto;
+}
+
+.entry-form {
+    background: rgba(255, 255, 255, 0.85);
+    margin-top: 20px;
+    padding:0px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.list-container {
+    background: rgba(255, 255, 255, 0.85);  
+    margin-top: 20px;    
+    padding: 0px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Prevents horizontal overflow */
+}
+
+.table {
+    font-size: 14px; /* Reduced font size for better mobile view */
+    white-space: nowrap; /* Ensures content does not wrap */
+}
+
+@media (min-width: 768px) {
+    .entry-form {
+        width: 30%;
+    }
+    .list-container {
+        width: 70%;
+    }
+}
+
+@media (max-width: 767px) {
+    .table {
+        font-size: 12px;
+    }
+    .entry-form, .list-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+        
         .logo {
             width: 80px;
             height: 80px;
@@ -47,13 +68,6 @@
         .font{
             font-family: 'Poppins', sans-serif;
             font-weight: 900;
-        }
-        .list-container {
-            background: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            width: 65%;
         }
         .table {
             margin-top: 10px;
@@ -66,80 +80,77 @@
             cursor: pointer;
             border-radius: 12px;
         }
-
         .f-info{
-     height: 8rem;
-     padding: 15px 0px;
-    background-color: rgb(232, 232, 232);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items:center;
-}
-.f-info-socials,.f-info-company,.f-info-links{
-    width: 100%;
-    text-align: center;
-}
-.f-info-socials i{
-    font-size: 1.4rem;
-    padding: 0px 10px;
-}
-.f-info-links a {
-    text-decoration:none;
-    color:#222222;
-}
-.f-info-links{
-    width: 100%;
-}
-
-.f-info-links a:hover {
-    text-decoration: underline;
-}
+            height: 8rem;
+            padding: 15px 0px;
+            background-color: rgb(232, 232, 232);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items:center;
+        }
+        .f-info-socials,.f-info-company,.f-info-links{
+            width: 100%;
+            text-align: center;
+        }
+        .f-info-socials i{
+            font-size: 1.4rem;
+            padding: 0px 10px;
+        }
+        .f-info-links a {
+            text-decoration:none;
+            color:#222222;
+        }
+        .f-info-links a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
-    <div class="container d-flex justify-content-between">
-        <div class="entry-form">
-            <div class="entry-form-img"><img src="Present Sir Logo_edited.jpg" alt="Logo" class="logo"></div>
-            <h3 class="text-center font">Add Class Details</h3>
-            <form id="classForm">
-                <div class="mb-3">
-                    <label for="className" class="form-label">Class Name</label>
-                    <input type="text" class="form-control" id="className" placeholder="Enter class name" required>
-                </div>
-                <div class="mb-3">
-                    <label for="section" class="form-label">Section</label>
-                    <input type="text" class="form-control" id="section" placeholder="Enter section" required>
-                </div>
-                <div class="mb-3">
-                    <label for="teacher" class="form-label">Class Teacher</label>
-                    <input type="text" class="form-control" id="teacher" placeholder="Enter teacher name" required>
-                </div>
-                <div class="mb-3">
-                    <label for="students" class="form-label">No. of Students</label>
-                    <input type="number" class="form-control" id="students" placeholder="Enter no. of students" required>
-                </div>
-                <button type="submit" class="btn btn-primary w-100">Add Entry</button>
-            </form>
-        </div>
-        <div class="list-container">
-            <h3 class="text-center font">Classes Details</h3>
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Class</th>
-                        <th>Section</th>
-                        <th>Class Teacher</th>
-                        <th>No. of Students</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody id="classList">
-                    <tr id="emptyMessage">
-                        <td colspan="5" class="text-center text-muted">No entries yet.</td>
-                    </tr>
-                </tbody>
-            </table>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-12 entry-form">
+                <div class="text-center"><img src="Present Sir Logo_edited.jpg" alt="Logo" class="logo"></div>
+                <h3 class="text-center font">Add Class Details</h3>
+                <form id="classForm">
+                    <div class="mb-3">
+                        <label for="className" class="form-label">Class Name</label>
+                        <input type="text" class="form-control" id="className" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="section" class="form-label">Section</label>
+                        <input type="text" class="form-control" id="section" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="teacher" class="form-label">Class Teacher</label>
+                        <input type="text" class="form-control" id="teacher" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="students" class="form-label">No. of Students</label>
+                        <input type="number" class="form-control" id="students" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Add Entry</button>
+                </form>
+            </div>
+            <div class="col-md-8 col-12 list-container">
+                <h3 class="text-center font">Classes Details</h3>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Class</th>
+                            <th>Section</th>
+                            <th>Class Teacher</th>
+                            <th>No. of Students</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="classList">
+                        <tr id="emptyMessage">
+                            <td colspan="5" class="text-center text-muted">No entries yet.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
     <footer>
@@ -150,15 +161,13 @@
             <i class="fa-brands fa-square-instagram"></i>
             <i class="fa-brands fa-square-twitter"></i>
           </div>
-          <div class="f-info-company">&copy;PresentSir Private Limited</div>
+          <div class="f-info-company">&copy; PresentSir Private Limited</div>
           <div class="f-info-links">
             <a href="privacy">Privacy</a>
             <a href="terms">Terms</a>
           </div>
         </div>
-      </footer>
-
-
+    </footer>
     <script>
         document.getElementById("classForm").addEventListener("submit", function(event) {
             event.preventDefault();

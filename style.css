@@ -12,6 +12,28 @@ body{
     box-shadow: #000000;
 }
 
+.navbar-brand img {
+  height: 50px;
+}
+
+.media-container img, .bg-video {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .heading_name {
+    font-size: 1.2rem;
+  }
+  .btn-lg {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+  .navbar-nav {
+    text-align: center;
+  }
+}
+
 .logo{
     height:2.6rem;
 
@@ -21,9 +43,25 @@ body{
 }
 
 .present_sir{
-    font-size: 7.5rem;
+    
     font-weight: 900;
     color: #f9f9f9;        
+}
+
+.responsive-text {
+  font-size: 1.5rem; /* Default size for mobile */
+}
+
+@media (min-width: 768px) { /* Tablets and above */
+  .responsive-text {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 992px) { /* Laptops and desktops */
+  .responsive-text {
+    font-size: 7.5rem;
+  }
 }
 
 
